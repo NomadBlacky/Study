@@ -3,8 +3,10 @@
   <head>
     <script src="./angular.min.js"></script>
     <script src="./test.js"></script>
+    <link href="./test.css" rel="stylesheet"/>
   </head>
   <body>
+    <h1>AngularJS サンプル</h1>
     <div>
       <p>
 	<input type="text" ng-model="yourName" />
@@ -13,6 +15,7 @@
 	Hello {{yourName|uppercase}}
       </p>
     </div>
+    <h2>リスト</h2>
     <div ng-controller="myController as ctrl">
       <ul>
 	<li ng-repeat="member in ctrl.members|orderBy:'age':true">{{member.name}} {{member.age}}</li>
