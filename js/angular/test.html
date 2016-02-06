@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="./angular.min.js"></script>
+    <script src="./test.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+	<input type="text" ng-model="yourName" />
+      </p>
+      <p>
+	Hello {{yourName|uppercase}}
+      </p>
+    </div>
+    <div ng-controller="myController as ctrl">
+      <ul>
+	<li ng-repeat="member in ctrl.members|orderBy:'age':true">{{member.name}} {{member.age}}</li>
+      </ul>
+      <div>
+	{{ctrl.members.length}} members
+      </div>
+    </div>
+  </body>
+</html>
